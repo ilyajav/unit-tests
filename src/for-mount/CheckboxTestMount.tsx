@@ -2,9 +2,10 @@ import React, {
     ChangeEvent,
     useState,
 } from "react";
+import {Input} from "./Input";
 
 
-export const CheckboxText = () => {
+export const CheckboxTextMount = () => {
     const [checked, setChecked] = useState(false);
 
     const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
@@ -14,11 +15,9 @@ export const CheckboxText = () => {
     return (
         <div>
             <p>Test</p>
-            <input
-                type='checkbox'
+            <Input
                 checked={checked}
-                onChange={onChangeChecked}
-                style={{height: '40px', width: '40px'}}
+                onChangeChecked={onChangeChecked}
             />
             {checked && <p style={{fontSize: '50px'}}>Тестирование checkbox с помощью enzyme</p>}
         </div>
