@@ -1,25 +1,27 @@
 import React, {ChangeEvent} from "react";
 
 type InputProps = {
-    checked: boolean
-    onChangeChecked: (e: ChangeEvent<HTMLInputElement>) => void;
+    checked: boolean;
+    onChecked: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = (
     {
-        checked,
-        onChangeChecked
+     checked,
+     onChecked,
     }: InputProps
 ) => {
+
     return (
     <div>
+        <p>Test1</p>
         <input
+            name='input-check'
             type='checkbox'
             checked={checked}
-            onChange={onChangeChecked}
+            onChange={e => onChecked(e)}
             style={{height: '40px', width: '40px'}}
         />
-        <p>Test render</p>
     </div>
 )
 }

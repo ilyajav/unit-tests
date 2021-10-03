@@ -6,8 +6,8 @@ import {CheckboxTextMount} from "./for-mount/CheckboxTestMount";
 function App() {
    return(
        <div className={'App'}>
-           <CheckboxText />
-           {/*<CheckboxTextMount />*/}
+           {/*<CheckboxText />*/}
+           <CheckboxTextMount />
        </div>
    )
 }

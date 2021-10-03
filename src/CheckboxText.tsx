@@ -8,6 +8,7 @@ export const CheckboxText = () => {
     const [checked, setChecked] = useState(false);
 
     const onChangeChecked = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log(e.currentTarget.checked)
         setChecked(e.currentTarget.checked);
     }
 
